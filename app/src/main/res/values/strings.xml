@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Como Park Visitor Guide</string>
+    <string name="title_section1">Visitor Guide</string>
+    <string name="title_section2">Attractions</string>
+    <string name="title_section3">Maps</string>
+    <string name="title_section4">Music</string>
+    <string name="title_section5">Credits</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_place_list">Places</string>
+    <string name="title_place_detail">Place Detail</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="web_fragment">Hello blank fragment</string>
+
+</resources>
