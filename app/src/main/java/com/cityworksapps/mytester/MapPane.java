@@ -10,34 +10,39 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.SupportMapFragment;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 
 
 
-
-public class MapPane extends Activity implements OnMapReadyCallback {
+public class MapPane extends FragmentActivity implements OnMapReadyCallback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         Log.e("Tag your it", "Who nose");
-        MapFragment mapFragment = (MapFragment) getFragmentManager()
+       // FragmentManager fragmentManager = getSupportFragmentManager();
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
-       if (mapFragment == null) Log.e("Tag your it", "Who nose");
+       if (mapFragment == null) Log.e("Tag your it", "Null fragment man");
         //Log.e("Tag your it", "Who nose");
         mapFragment.getMapAsync(this);
     }
 
     @Override
     public void onMapReady(GoogleMap map) {
-        LatLng sydney = new LatLng(-93.007, 45.00);
+
+        Log.e("inthecallback", "Here we go ");
+        LatLng stpaul = new LatLng(45.0000, -93.1333);
 
         map.setMyLocationEnabled(true);
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 13));
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(stpaul, 13));
 
         map.addMarker(new MarkerOptions()
-                .title("Sydney")
-                .snippet("The most populous city in Australia.")
-                .position(sydney));
+                .title("Saint Paul")
+                .snippet("The coolest city in Minnesota.")
+                .position(stpaul));
     }
 }
